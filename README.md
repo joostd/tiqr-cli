@@ -85,19 +85,22 @@ $ bin/register-finish.php -s c3234848
 
 The script will show a QR code on the terminal and output a random username.
 
-### authenticate the new user
+### authenticate a user
 
-TODO
+    $ bin/login-start.php 
+
+### authenticate a specific user
+
+    $ bin/login-start.php -u xkcd
 
 ### re-authenticate the new user with a push notification
 
-TODO
-
+    $ bin/login-start.php -u xkcd -m
 
 ## Scripting
 
 Above scripts can be combined to test different scenario's.
-Examples are procided in the `scripts` directory.
+Examples are provided in the `scripts` directory.
 
 For instance, the script `register-login-push.sh` will first register a new tiqr account, then ask to login with that account, and finally perform a re-authentication using a push message.
 
@@ -105,5 +108,5 @@ For instance, the script `register-login-push.sh` will first register a new tiqr
 
 Note that authentication endpoints are pinned during registration. If you change endpoints (typically when using dynamic ngrok endpoints) you need to delete any tiqr account on your device registered using the old endpoint. Your tiqr client will complain.
 
-The tiqr authentication service stores accounts in the `/tmp` directory. This directory is periodically empties (e.g. after a reboot). Make sure that tiqr accounts stored on a device may no longer be known to the authentication server in that case.
+The tiqr authentication service stores accounts in the `/tmp` directory. This directory is periodically emptied (e.g. after a reboot). Make sure that tiqr accounts stored on a device may no longer be known to the authentication server in that case.
 

@@ -1,0 +1,11 @@
+<?php
+// local options
+$options["apns.certificate"] = __DIR__ . "/apns.pem";
+$options["apns.environment"] = "production";
+$options["gcm.application"] = "project-name-12345";
+$options["gcm.apikey"]      = "AAAA_somegobbledygookhere";
+$options["devicestorage"] = array(
+    "type" => "tokenexchange",
+    "url" => "https://tx.tiqr.org/tokenexchange/",
+    "appid" => "tiqr",
+);

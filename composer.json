@@ -1,0 +1,6 @@
+{
+    "require": {
+        "tiqr/tiqr-server-libphp": "dev-master",
+        "ext-json": "*"
+    }
+}

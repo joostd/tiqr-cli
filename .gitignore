@@ -1,0 +1,4 @@
+/vendor/
+local_options.php
+*.pem
+.idea
